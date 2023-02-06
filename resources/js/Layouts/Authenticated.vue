@@ -5,7 +5,6 @@ import BreezeDropdown from '@/Components/Dropdown.vue';
 import BreezeDropdownLink from '@/Components/DropdownLink.vue';
 import BreezeNavLink from '@/Components/NavLink.vue';
 import BreezeResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
-import BreezeTodo from '@/Pages/TodoApplication.vue'
 import { Link } from '@inertiajs/inertia-vue3';
 
 const showingNavigationDropdown = ref(false);
@@ -30,6 +29,15 @@ const showingNavigationDropdown = ref(false);
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
+                                </BreezeNavLink>
+                                <BreezeNavLink :href="route('todo')" :active="route().current('todo')">
+                                    Todo Application
+                                </BreezeNavLink>
+                                <BreezeNavLink :href="route('savings')" :active="route().current('savings')">
+                                    Tracker Savings
+                                </BreezeNavLink>
+                                <BreezeNavLink :href="route('watch')" :active="route().current('watch')">
+                                    Stop Watch
                                 </BreezeNavLink>
                             </div>
                             

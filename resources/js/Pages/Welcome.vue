@@ -48,7 +48,7 @@ defineProps({
                         <h1>Welcome to my First Laravel Project & Vue</h1>
                         <ul class="list-decimal">
                             <li>Todo Application</li>
-                            <li>Savings Tracker</li>
+                            <li>Tracker Savings</li>
                             <li>StopWatch</li>
                         </ul>
 

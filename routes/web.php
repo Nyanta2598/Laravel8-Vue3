@@ -28,5 +28,17 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/todo', function () {
+    return Inertia::render('TodoApplication');
+})->middleware(['auth', 'verified'])->name('todo');
+
+Route::get('/savings', function () {
+    return Inertia::render('TrackerSavings');
+})->middleware(['auth', 'verified'])->name('savings');
+
+Route::get('/watch', function () {
+    return Inertia::render('StopWatch');
+})->middleware(['auth', 'verified'])->name('watch');
+
 
 require __DIR__.'/auth.php';
