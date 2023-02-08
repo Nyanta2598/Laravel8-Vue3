@@ -34,7 +34,7 @@ export default {
         return {
             timerState: 'stopped',
             currentTimer: 0,
-            formattedTime: "00:00:00",
+            formattedTime: "00:00:00:00",
             ticker: undefined,
             laps: [],
             latestLap: "",
@@ -64,19 +64,19 @@ export default {
         stop () {
             window.clearInterval(this.ticker);
             this.currentTimer = 0;
-            this.formattedTime = "00:00:00";
+            this.formattedTime = "00:00:00:00";
             this.timerState = "stopped"
         },
         tick () {
             this.ticker = setInterval(() => {
                 this.currentTimer++;
                 this.formattedTime = this.formatTime(this.currentTimer);
-            }, 1000)
+            }, -500)
         },
         formatTime (seconds) {
             let measuredTime = new Date(null);
-            measuredTime.setSeconds(seconds);
-            let MHSTime = measuredTime.toISOString().substr(11, 8);
+            measuredTime.setMilliseconds(seconds);
+            let MHSTime = measuredTime.toISOString().substr(11, 11);
             return MHSTime;
         }
     }

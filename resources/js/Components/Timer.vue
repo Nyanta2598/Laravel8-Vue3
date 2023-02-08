@@ -3,7 +3,7 @@
     <div class="text-6xl text-center flex w-full items-center justify-center">
         <div class="w-auto mx-1 p-2 bg-white text-indigo-400 rounded-lg">
             <div class="font-mono leading-none" x-text="days">{{ timer }}</div>
-            <div class="font-mono uppercase text-sm leading-none">Hours | Minutes | Seconds</div>
+            <div class="font-mono uppercase text-sm leading-none">Hours | Minutes | Seconds | Milliseconds</div>
         </div>
     </div>
 </div>
