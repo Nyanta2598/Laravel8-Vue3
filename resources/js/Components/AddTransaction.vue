@@ -17,21 +17,26 @@
                 </button>
             </header>
   
-            <section class="p-6 space-y-6">
+            <section class="p-6 space-y-1">
                 <slot name="body">
-
-                    <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
-                        <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                            Income
-                        </span>
+                    <button @click="income = !income"  :class="income?'text-white bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300':''" class="border border-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800">   
+                        Income
                     </button>
-                    <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
-                        <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                            Expense
-                        </span>
+                    <button @click="expense = !expense" :class="expense?'text-white bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300':''"  class="border border-red-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                        Expense
                     </button>
-                    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
-                    <h1>Select income category</h1>
+                    <div id="income" v-if="income" >
+                        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+                        <h1>Select income category</h1>
+                        <button @click="salary = !salary" :class="salary?'text-white bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300':''" class="border border-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800">Salary</button>
+                        <button @click="allowance = !allowance" :class="allowance?'text-white bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300':''" class="border border-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800">Allowance</button>
+                        <button @click="business = !business" :class="business?'text-white bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300':''" class="border border-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800">Business</button>
+                        <button @click="savings = !savings" :class="savings?'text-white bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300':''" class="border border-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800">Savings</button>
+                        <button @click="others = !others" :class="others?'text-white bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300':''" class="border border-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800">Others</button>
+                    </div>
+                    <div id="expense" v-else-if="expense">Nice</div>
+                    <div v-else></div>
+                    
                 </slot>
             </section>
   
@@ -60,6 +65,17 @@
 <script>
   export default {
     name: 'Modal',
+    data() {
+        return {
+            income: false,
+            expense: false,
+            salary: false,
+            allowance: false,
+            business: false,
+            savings: false,
+            others: false
+        }
+    },
     methods: {
       close() {
         this.$emit('close');
