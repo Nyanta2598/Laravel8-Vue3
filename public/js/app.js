@@ -20452,6 +20452,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'Modal',
   data: function data() {
@@ -20462,12 +20463,144 @@ __webpack_require__.r(__webpack_exports__);
       allowance: false,
       business: false,
       savings: false,
-      others: false
+      others: false,
+      food: false,
+      transportation: false,
+      home: false,
+      electricity: false,
+      utilities: false,
+      healthcare: false,
+      credits: false,
+      other: false
     };
   },
   methods: {
     close: function close() {
       this.$emit('close');
+    },
+    // Methods that are triggered by clicking the corresponding buttons
+    incomeShow: function incomeShow() {
+      this.income = !this.income;
+      this.expense = false;
+    },
+    expenseShow: function expenseShow() {
+      this.expense = !this.expense;
+      this.income = false;
+    },
+    salaryShow: function salaryShow() {
+      this.salary = !this.salary;
+      this.allowance = false;
+      this.business = false;
+      this.savings = false;
+      this.others = false;
+    },
+    allowanceShow: function allowanceShow() {
+      this.allowance = !this.allowance;
+      this.salary = false;
+      this.business = false;
+      this.savings = false;
+      this.others = false;
+    },
+    businessShow: function businessShow() {
+      this.business = !this.business;
+      this.salary = false;
+      this.allowance = false;
+      this.savings = false;
+      this.others = false;
+    },
+    savingsShow: function savingsShow() {
+      this.savings = !this.savings;
+      this.salary = false;
+      this.allowance = false;
+      this.business = false;
+      this.others = false;
+    },
+    othersShow: function othersShow() {
+      this.others = !this.others;
+      this.salary = false;
+      this.allowance = false;
+      this.savings = false;
+      this.business = false;
+    },
+    foodShow: function foodShow() {
+      this.food = !this.food;
+      this.transportation = false;
+      this.home = false;
+      this.electricity = false;
+      this.utilities = false;
+      this.healthcare = false;
+      this.credits = false;
+      this.other = false;
+    },
+    transportationShow: function transportationShow() {
+      this.transportation = !this.transportation;
+      this.food = false;
+      this.home = false;
+      this.electricity = false;
+      this.utilities = false;
+      this.healthcare = false;
+      this.credits = false;
+      this.other = false;
+    },
+    homeShow: function homeShow() {
+      this.home = !this.home;
+      this.transportation = false;
+      this.food = false;
+      this.electricity = false;
+      this.utilities = false;
+      this.healthcare = false;
+      this.credits = false;
+      this.other = false;
+    },
+    electricityShow: function electricityShow() {
+      this.electricity = !this.electricity;
+      this.transportation = false;
+      this.home = false;
+      this.food = false;
+      this.utilities = false;
+      this.healthcare = false;
+      this.credits = false;
+      this.other = false;
+    },
+    utilitiesShow: function utilitiesShow() {
+      this.utilities = !this.utilities;
+      this.transportation = false;
+      this.home = false;
+      this.electricity = false;
+      this.food = false;
+      this.healthcare = false;
+      this.credits = false;
+      this.other = false;
+    },
+    healthcareShow: function healthcareShow() {
+      this.healthcare = !this.healthcare;
+      this.transportation = false;
+      this.home = false;
+      this.electricity = false;
+      this.food = false;
+      this.utilities = false;
+      this.credits = false;
+      this.other = false;
+    },
+    creditsShow: function creditsShow() {
+      this.credits = !this.credits;
+      this.transportation = false;
+      this.home = false;
+      this.electricity = false;
+      this.food = false;
+      this.healthcare = false;
+      this.utilities = false;
+      this.other = false;
+    },
+    otherShow: function otherShow() {
+      this.other = !this.other;
+      this.transportation = false;
+      this.home = false;
+      this.electricity = false;
+      this.food = false;
+      this.healthcare = false;
+      this.credits = false;
+      this.utilities = false;
     }
   }
 });
@@ -21838,7 +21971,7 @@ var _hoisted_2 = {
 var _hoisted_3 = {
   "class": "flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
 };
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, "Select transaction type:", -1 /* HOISTED */);
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, "Add Transaction", -1 /* HOISTED */);
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   "aria-hidden": "true",
   "class": "w-5 h-5",
@@ -21854,24 +21987,92 @@ var _hoisted_6 = [_hoisted_5];
 var _hoisted_7 = {
   "class": "p-6 space-y-1"
 };
-var _hoisted_8 = {
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
+  "class": "text-2xl font-extrabold dark:text-white"
+}, "Select transaction type:", -1 /* HOISTED */);
+var _hoisted_9 = {
   key: 0,
   id: "income"
 };
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
-  "class": "h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
+  "class": "text-2xl font-extrabold dark:text-white"
+}, "Select income category:", -1 /* HOISTED */);
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
+  "class": "text-2xl font-extrabold dark:text-white"
+}, "Income Amount:", -1 /* HOISTED */);
+var _hoisted_12 = {
+  key: 0,
+  "class": "flex items-center"
+};
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  placeholder: "Salary",
+  type: "number",
+  "class": "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-800 focus:border-green-800 block w-5/6 pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 }, null, -1 /* HOISTED */);
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, "Select income category", -1 /* HOISTED */);
-var _hoisted_11 = {
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  "class": "p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+}, " Add ", -1 /* HOISTED */);
+var _hoisted_15 = [_hoisted_13, _hoisted_14];
+var _hoisted_16 = {
+  key: 1,
+  "class": "flex items-center"
+};
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  placeholder: "Allowance",
+  type: "number",
+  "class": "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-800 focus:border-green-800 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+}, null, -1 /* HOISTED */);
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  "class": "p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+}, " Add ", -1 /* HOISTED */);
+var _hoisted_19 = [_hoisted_17, _hoisted_18];
+var _hoisted_20 = {
+  key: 2,
+  "class": "flex items-center"
+};
+var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  placeholder: "Business",
+  type: "text",
+  "class": "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-800 focus:border-green-800 block w-5/6 pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+}, null, -1 /* HOISTED */);
+var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  "class": "p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+}, " Add ", -1 /* HOISTED */);
+var _hoisted_23 = [_hoisted_21, _hoisted_22];
+var _hoisted_24 = {
+  key: 3,
+  "class": "flex items-center"
+};
+var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  placeholder: "Savings",
+  type: "text",
+  "class": "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-800 focus:border-green-800 block w-5/6 pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+}, null, -1 /* HOISTED */);
+var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  "class": "p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+}, " Add ", -1 /* HOISTED */);
+var _hoisted_27 = [_hoisted_25, _hoisted_26];
+var _hoisted_28 = {
+  key: 4,
+  "class": "flex items-center"
+};
+var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  placeholder: "Others",
+  type: "text",
+  "class": "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-800 focus:border-green-800 block w-5/6 pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+}, null, -1 /* HOISTED */);
+var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  "class": "p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+}, " Add ", -1 /* HOISTED */);
+var _hoisted_31 = [_hoisted_29, _hoisted_30];
+var _hoisted_32 = {
   key: 1,
   id: "expense"
 };
-var _hoisted_12 = {
-  key: 2
-};
-var _hoisted_13 = {
-  "class": "flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
-};
+var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
+  "class": "text-2xl font-extrabold dark:text-white"
+}, "Select expense category:", -1 /* HOISTED */);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "header", {}, function () {
     return [_hoisted_4];
@@ -21882,53 +22083,109 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return $options.close && $options.close.apply($options, arguments);
     })
   }, _hoisted_6)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "body", {}, function () {
-    return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-      onClick: _cache[1] || (_cache[1] = function ($event) {
-        return $data.income = !$data.income;
+    return [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+      onClick: _cache[1] || (_cache[1] = function () {
+        return $options.incomeShow && $options.incomeShow.apply($options, arguments);
       }),
       "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.income ? 'text-white bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300' : '', "border border-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800"])
     }, " Income ", 2 /* CLASS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-      onClick: _cache[2] || (_cache[2] = function ($event) {
-        return $data.expense = !$data.expense;
+      onClick: _cache[2] || (_cache[2] = function () {
+        return $options.expenseShow && $options.expenseShow.apply($options, arguments);
       }),
       "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.expense ? 'text-white bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300' : '', "border border-red-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"])
-    }, " Expense ", 2 /* CLASS */), $data.income ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_8, [_hoisted_9, _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-      onClick: _cache[3] || (_cache[3] = function ($event) {
-        return $data.salary = !$data.salary;
+    }, " Expense ", 2 /* CLASS */), $data.income ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_9, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      onClick: _cache[3] || (_cache[3] = function () {
+        return $options.salaryShow && $options.salaryShow.apply($options, arguments);
       }),
-      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.salary ? 'text-white bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300' : '', "border border-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800"])
-    }, "Salary", 2 /* CLASS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-      onClick: _cache[4] || (_cache[4] = function ($event) {
-        return $data.allowance = !$data.allowance;
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.salary ? 'text-white bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300' : '', "border border-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800"]),
+      type: "button",
+      value: "Salary"
+    }, null, 2 /* CLASS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      onClick: _cache[4] || (_cache[4] = function () {
+        return $options.allowanceShow && $options.allowanceShow.apply($options, arguments);
       }),
-      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.allowance ? 'text-white bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300' : '', "border border-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800"])
-    }, "Allowance", 2 /* CLASS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-      onClick: _cache[5] || (_cache[5] = function ($event) {
-        return $data.business = !$data.business;
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.allowance ? 'text-white bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300' : '', "border border-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800"]),
+      type: "button",
+      value: "Allowance"
+    }, null, 2 /* CLASS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      onClick: _cache[5] || (_cache[5] = function () {
+        return $options.businessShow && $options.businessShow.apply($options, arguments);
       }),
-      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.business ? 'text-white bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300' : '', "border border-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800"])
-    }, "Business", 2 /* CLASS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-      onClick: _cache[6] || (_cache[6] = function ($event) {
-        return $data.savings = !$data.savings;
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.business ? 'text-white bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300' : '', "border border-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800"]),
+      type: "button",
+      value: "Business"
+    }, null, 2 /* CLASS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      onClick: _cache[6] || (_cache[6] = function () {
+        return $options.savingsShow && $options.savingsShow.apply($options, arguments);
       }),
-      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.savings ? 'text-white bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300' : '', "border border-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800"])
-    }, "Savings", 2 /* CLASS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-      onClick: _cache[7] || (_cache[7] = function ($event) {
-        return $data.others = !$data.others;
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.savings ? 'text-white bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300' : '', "border border-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800"]),
+      type: "button",
+      value: "Savings"
+    }, null, 2 /* CLASS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      onClick: _cache[7] || (_cache[7] = function () {
+        return $options.othersShow && $options.othersShow.apply($options, arguments);
       }),
-      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.others ? 'text-white bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300' : '', "border border-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800"])
-    }, "Others", 2 /* CLASS */)])) : $data.expense ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_11, "Nice")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_12))];
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("footer", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "footer"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    type: "button",
-    "class": "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800",
-    onClick: _cache[8] || (_cache[8] = function () {})
-  }, " Add "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    type: "button",
-    "class": "text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600",
-    onClick: _cache[9] || (_cache[9] = function () {
-      return $options.close && $options.close.apply($options, arguments);
-    })
-  }, " Cancel ")])])]);
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.others ? 'text-white bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300' : '', "border border-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800"]),
+      type: "button",
+      value: "Others"
+    }, null, 2 /* CLASS */), _hoisted_11, $data.salary ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_12, _hoisted_15)) : $data.allowance ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_16, _hoisted_19)) : $data.business ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_20, _hoisted_23)) : $data.savings ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_24, _hoisted_27)) : $data.others ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_28, _hoisted_31)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])) : $data.expense ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_32, [_hoisted_33, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      onClick: _cache[8] || (_cache[8] = function () {
+        return $options.foodShow && $options.foodShow.apply($options, arguments);
+      }),
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.food ? 'text-white bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300' : '', "border border-red-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-800"]),
+      type: "button",
+      value: "Food"
+    }, null, 2 /* CLASS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      onClick: _cache[9] || (_cache[9] = function () {
+        return $options.transportationShow && $options.transportationShow.apply($options, arguments);
+      }),
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.transportation ? 'text-white bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300' : '', "border border-red-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-800"]),
+      type: "button",
+      value: "Transportation"
+    }, null, 2 /* CLASS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      onClick: _cache[10] || (_cache[10] = function () {
+        return $options.homeShow && $options.homeShow.apply($options, arguments);
+      }),
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.home ? 'text-white bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300' : '', "border border-red-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-800"]),
+      type: "button",
+      value: "Home"
+    }, null, 2 /* CLASS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      onClick: _cache[11] || (_cache[11] = function () {
+        return $options.electricityShow && $options.electricityShow.apply($options, arguments);
+      }),
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.electricity ? 'text-white bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300' : '', "border border-red-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-800"]),
+      type: "button",
+      value: "Electricity"
+    }, null, 2 /* CLASS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      onClick: _cache[12] || (_cache[12] = function () {
+        return $options.utilitiesShow && $options.utilitiesShow.apply($options, arguments);
+      }),
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.utilities ? 'text-white bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300' : '', "border border-red-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-800"]),
+      type: "button",
+      value: "Utilities"
+    }, null, 2 /* CLASS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      onClick: _cache[13] || (_cache[13] = function () {
+        return $options.healthcareShow && $options.healthcareShow.apply($options, arguments);
+      }),
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.healthcare ? 'text-white bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300' : '', "border border-red-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-800"]),
+      type: "button",
+      value: "Health Care"
+    }, null, 2 /* CLASS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      onClick: _cache[14] || (_cache[14] = function () {
+        return $options.creditsShow && $options.creditsShow.apply($options, arguments);
+      }),
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.credits ? 'text-white bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300' : '', "border border-red-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-800"]),
+      type: "button",
+      value: "Creadits"
+    }, null, 2 /* CLASS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      onClick: _cache[15] || (_cache[15] = function () {
+        return $options.otherShow && $options.otherShow.apply($options, arguments);
+      }),
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.other ? 'text-white bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300' : '', "border border-red-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-800"]),
+      type: "button",
+      value: "Others"
+    }, null, 2 /* CLASS */)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)];
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <footer class=\"flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600\">\r\n                <slot name=\"footer\">\r\n                    \r\n                </slot>\r\n                <button\r\n                    type=\"button\"\r\n                    class=\"text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800\"\r\n                    @click=\"\"\r\n                >\r\n                    Add\r\n                </button>\r\n                <button\r\n                    type=\"button\"\r\n                    class=\"text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600\"\r\n                    @click=\"close\"\r\n                >\r\n                    Cancel\r\n                </button>\r\n            </footer> ")])]);
 }
 
 /***/ }),
@@ -23354,7 +23611,7 @@ var _hoisted_5 = {
   "class": "bg-white overflow-hidden shadow-sm sm:rounded-lg"
 };
 var _hoisted_6 = {
-  "class": "p-6 bg-white border-b border-gray-200"
+  "class": "p-6 bg-white border-b border-gray-200 flex items-center"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Head"], {
@@ -23372,7 +23629,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         })
       }, " Add Transaction "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
         type: "button",
-        "class": "block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800",
+        "class": "ml-2 block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800",
         onClick: _cache[1] || (_cache[1] = function () {
           return $options.showModal && $options.showModal.apply($options, arguments);
         })
